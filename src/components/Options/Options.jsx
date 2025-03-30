@@ -1,5 +1,5 @@
 import css from "./Options.module.css";
-function Options({ updateFeedback, resetFeedback }) {
+function Options({ updateFeedback, resetFeedback, totalFeedback }) {
   return (
     <>
       <button
@@ -26,9 +26,11 @@ function Options({ updateFeedback, resetFeedback }) {
       >
         Bad
       </button>
-      <button className={css.buttonOpt} onClick={resetFeedback}>
-        Reset
-      </button>
+      {totalFeedback > 0 && (
+        <button className={css.buttonOpt} onClick={resetFeedback}>
+          Reset
+        </button>
+      )}
     </>
   );
 }

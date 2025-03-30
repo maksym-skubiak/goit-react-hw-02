@@ -34,7 +34,11 @@ function App() {
   return (
     <>
       <Descriptions />
-      <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} />
+      <Options
+        updateFeedback={updateFeedback}
+        resetFeedback={resetFeedback}
+        totalFeedback={totalFeedback}
+      />
       {totalFeedback > 0 && (
         <Feedback
           feedback={feedback}
